@@ -1,0 +1,19 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: calc(100vh - 100px);
+  padding: 6rem 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.description {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
