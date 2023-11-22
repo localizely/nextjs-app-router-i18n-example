@@ -26,7 +26,7 @@ export function middleware(request: NextRequest) {
 
   const { locales, defaultLocale } = i18n;
 
-  const pathname = request.nextUrl.pathname;
+  const { basePath, pathname } = request.nextUrl;
 
   const pathLocale = locales.find(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
@@ -38,7 +38,9 @@ export function middleware(request: NextRequest) {
       let pathWithoutLocale = pathname.slice(`/${pathLocale}`.length) || "/";
       if (request.nextUrl.search) pathWithoutLocale += request.nextUrl.search;
 
-      response = NextResponse.redirect(new URL(pathWithoutLocale, request.url));
+      const url = basePath + pathWithoutLocale;
+
+      response = NextResponse.redirect(new URL(url, request.url));
     }
 
     nextLocale = pathLocale;
@@ -50,10 +52,12 @@ export function middleware(request: NextRequest) {
     let newPath = `/${locale}${pathname}`;
     if (request.nextUrl.search) newPath += request.nextUrl.search;
 
+    const url = basePath + newPath;
+
     response =
       locale === defaultLocale
-        ? NextResponse.rewrite(new URL(newPath, request.url))
-        : NextResponse.redirect(new URL(newPath, request.url));
+        ? NextResponse.rewrite(new URL(url, request.url))
+        : NextResponse.redirect(new URL(url, request.url));
     nextLocale = locale;
   }
 
