@@ -3,5 +3,6 @@
   "page.home.head.title": "Next.js i18n voorbeeld",
   "page.home.head.meta.description": "Next.js i18n voorbeeld - Nederlands (Nederland)",
   "page.home.title": "Welkom bij <b>Next.js i18n zelfstudie</b>",
-  "page.home.description": "U bekijkt momenteel de homepage in het Nederlands (Nederland) 🚀"
+  "page.home.description": "U bekijkt momenteel de homepage in het Nederlands (Nederland) 🚀",
+  "page.nested.title": "Voorbeeld van geneste route"
 }
