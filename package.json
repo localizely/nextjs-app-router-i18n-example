@@ -10,18 +10,18 @@
   },
   "dependencies": {
     "negotiator": "^0.6.3",
-    "next": "14.0.1",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-intl": "^6.5.1"
+    "next": "^14.2.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-intl": "^6.6.8"
   },
   "devDependencies": {
-    "@types/negotiator": "^0.6.2",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/negotiator": "^0.6.3",
+    "@types/node": "^20.16.1",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.0.1",
-    "typescript": "^5"
+    "typescript": "^5.5.4"
   }
 }

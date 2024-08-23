@@ -3,12 +3,12 @@ import Footer from "../../components/Footer/Footer";
 import { getDirection } from "../../lib/intl";
 import "./globals.css";
 
-type LayoutProps = {
+type Props = {
   params: { locale: string };
   children: React.ReactNode;
 };
 
-export default function RootLayout({ params, children }: LayoutProps) {
+export default function RootLayout({ params, children }: Props) {
   const { locale } = params;
 
   const dir = getDirection(locale);

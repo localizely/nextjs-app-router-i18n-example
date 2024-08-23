@@ -1,21 +1,19 @@
-"use client";
+import FooterContent from "./FooterContent";
 
-import { FormattedMessage } from "react-intl";
-
-import FooterContainer from "./FooterContainer";
-
-function Footer({ locale }: { locale: string }) {
-  return (
-    <FooterContainer locale={locale}>
-      <div>
-        {/* eslint-disable-next-line */}
-        <img src="/img/next.svg" width={60} height={12} alt="NextJS " />
-      </div>
-      <div>
-        <FormattedMessage tagName="p" id="common.footer" />
-      </div>
-    </FooterContainer>
-  );
+async function getMessages(locale: string) {
+  return await import(`../../lang/${locale}.json`);
 }
 
-export default Footer;
+type Props = {
+  locale: string;
+};
+
+export default async function Footer({ locale }: Props) {
+  const messages = (await getMessages(locale)).default;
+
+  return (
+    <footer className="footer">
+      <FooterContent locale={locale} messages={messages} />
+    </footer>
+  );
+}

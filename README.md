@@ -18,8 +18,8 @@ For more details, please see the full post: [Next.js i18n tutorial](https://loca
 
 ## Requirements
 
-- Node
-- npm
+- Node ^18
+- npm ^10
 - git
 
 ## Steps to get the app running

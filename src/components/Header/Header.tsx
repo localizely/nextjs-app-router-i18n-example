@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { i18n } from "../../../i18n-config";
 
-function Header() {
+export default function Header() {
   const { locales, defaultLocale } = i18n;
 
   return (
@@ -19,5 +19,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
