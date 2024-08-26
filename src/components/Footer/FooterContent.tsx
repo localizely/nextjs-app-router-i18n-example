@@ -1,7 +1,6 @@
 "use client";
 
-import { IntlProvider } from "react-intl";
-import { FormattedMessage } from "react-intl";
+import { IntlProvider, FormattedMessage } from "react-intl";
 
 type Props = {
   locale: string;
